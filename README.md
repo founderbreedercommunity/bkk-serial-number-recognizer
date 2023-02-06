@@ -2,8 +2,18 @@
 
 ## Description
 
-TELLU TAX ITE dashboard Lambda API
+BKK Image Recognization tool
 
+## Pre-request
+### Install Node js
+https://nodejs.org/en/download/
+
+### Install Terraform
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+
+### AWS Account
+How to sign-up and setup AWS Cli Locally
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-prereqs.html
 
 ### Overview
   
@@ -16,11 +26,13 @@ TELLU TAX ITE dashboard Lambda API
       To install:
 ```
 npm install
-npm run build
+npm run-script build
 ```
 
 ### Deploying
-  
+pushd pipeline/terraform
+  terraform plan -out=tf.plan
+  terraform apply -input=false tf.plan
   *   #### Terraform
       
         **Requires Terraform version 0.10.7**
