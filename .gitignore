@@ -1,0 +1,21 @@
+node_modules
+build
+.idea
+dist/
+.nyc_output
+coverage/
+.DS_STORE
+.history
+.vscode
+.terraform
+tf.plan
+terraform.tfstate.*
+# Logs
+logs
+*.log
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+package-lock.json

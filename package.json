@@ -1,0 +1,51 @@
+{
+  "name": "bkk-serial-number-recognizer",
+  "description": "bkk-serial-number-recognizer",
+  "scripts": {
+    "test:intcoverage": "nyc --check-coverage --lines 90 npm run test:int",
+    "test:coverage": "nyc --check-coverage --lines 90 npm run test:unit",
+    "report": "nyc report --reporter=html",
+    "test:int": "mocha --timeout 10000 test/**/**.int.js",
+    "test:unit": "mocha --timeout 10000 test/**/**.unit.js",
+    "style": "eslint src/**/*.js",
+    "style:fix": "eslint --fix src/**/*.js",
+    "build": "lambda-zipper build -f src -o build/lambda.zip"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.660.0",
+    "lambda-logger-node": "^3.1.1",
+    "lambda-router": "^2.9.1",
+    "moment": "^2.25.3",
+    "file-type": "14.6.0",
+    "lodash":"4.17.15"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "casual": "^1.6.2",
+    "chai": "^4.2.0",
+    "chai-match-pattern": "^1.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "lambda-tester": "^4.0.1",
+    "lambda-zipper": "^0.4.1",
+    "mocha": "^5.2.0",
+    "mocked-env": "^1.3.2",
+    "nyc": "^13.3.0",
+    "sinon": "^8.1.1",
+    "why-is-node-running": "^2.1.2"
+  },
+  "peerDependencies": {},
+  "eslintConfig": {
+    "env": {},
+    "extends": [
+      "standard"
+    ]
+  },
+  "author": "BKK",
+  "version": "0.1.0",
+  "license": "Apache-2.0"
+}
